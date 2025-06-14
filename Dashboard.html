@@ -3,119 +3,117 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Voltgain - Dashboard</title>
+  <title>Voltgain Dashboard</title>
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      padding: 0;
-      background-color: #f7f7f7;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f2f6fc;
       color: #333;
     }
 
     header {
-      background-color: #222;
+      background-color: #111;
+      color: #fff;
       padding: 20px;
+      font-size: 30px;
+      font-weight: bold;
       text-align: center;
-    }
-
-    header h1 {
-      font-family: 'Orbitron', sans-serif;
-      font-size: 32px;
-      color: #ff9900;
+      font-family: 'Courier New', monospace;
       letter-spacing: 2px;
     }
 
-    .nav-buttons {
+    .button-row {
       display: flex;
-      justify-content: center;
-      margin: 20px 0;
-      gap: 20px;
+      justify-content: space-around;
+      margin: 20px;
     }
 
-    .nav-buttons a button {
+    .button {
       padding: 12px 20px;
       font-size: 16px;
+      background-color: #4a90e2;
+      color: white;
       border: none;
       border-radius: 8px;
-      cursor: pointer;
-      background-color: #ff9900;
-      color: white;
-      transition: background-color 0.3s;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: 0.3s;
     }
 
-    .nav-buttons a button:hover {
-      background-color: #cc7a00;
+    .button:hover {
+      background-color: #2f74c0;
     }
 
     .plans {
-      max-width: 600px;
-      margin: 0 auto;
-      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 20px;
     }
 
     .plan {
-      background-color: #fff;
-      border: 2px solid #ff9900;
+      background-color: white;
+      border: 1px solid #ddd;
       border-radius: 12px;
       padding: 20px;
-      margin-bottom: 20px;
-      text-align: center;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      margin: 10px;
+      width: 90%;
+      max-width: 400px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
     }
 
-    .plan h2 {
-      margin: 0 0 10px;
-      color: #ff9900;
+    .plan-title {
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 8px;
     }
 
-    .plan p {
-      margin: 5px 0;
+    .plan-details {
       font-size: 16px;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>VOLTGAIN</h1>
-  </header>
 
-  <div class="nav-buttons">
-    <a href="deposit.html"><button>Deposit</button></a>
-    <a href="withdraw.html"><button>Withdraw</button></a>
-    <a href="help.html"><button>Help</button></a>
+<header>⚡ VOLTGAIN ⚡</header>
+
+<div class="button-row">
+  <a href="deposit.html" class="button">
+    <img src="https://img.icons8.com/ios-filled/24/money.png"/> Deposit
+  </a>
+  <a href="withdrawal.html" class="button">
+    <img src="https://img.icons8.com/ios-filled/24/bank-card-back-side.png"/> Withdraw
+  </a>
+  <a href="help.html" class="button">
+    <img src="https://img.icons8.com/ios-filled/24/help.png"/> Help
+  </a>
+</div>
+
+<div class="plans">
+  <div class="plan">
+    <div class="plan-title">PLAN 1</div>
+    <div class="plan-details">₹199 • 15 Days • Daily ₹50</div>
   </div>
-
-  <div class="plans">
-    <div class="plan">
-      <h2>PLAN 1</h2>
-      <p>₹199 • 15 Days</p>
-      <p>Daily Return: ₹50</p>
-    </div>
-
-    <div class="plan">
-      <h2>PLAN 2</h2>
-      <p>₹499 • 35 Days</p>
-      <p>Daily Return: ₹129</p>
-    </div>
-
-    <div class="plan">
-      <h2>PLAN 3</h2>
-      <p>₹999 • 50 Days</p>
-      <p>Daily Return: ₹349</p>
-    </div>
-
-    <div class="plan">
-      <h2>PLAN 4</h2>
-      <p>₹1299 • 25 Days</p>
-      <p>Daily Return: ₹550</p>
-    </div>
-
-    <div class="plan">
-      <h2>PLAN 5</h2>
-      <p>₹2299 • 10 Days</p>
-      <p>Daily Return: ₹1199</p>
-    </div>
+  <div class="plan">
+    <div class="plan-title">PLAN 2</div>
+    <div class="plan-details">₹499 • 35 Days • Daily ₹129</div>
   </div>
+  <div class="plan">
+    <div class="plan-title">PLAN 3</div>
+    <div class="plan-details">₹999 • 50 Days • Daily ₹349</div>
+  </div>
+  <div class="plan">
+    <div class="plan-title">PLAN 4</div>
+    <div class="plan-details">₹1299 • 25 Days • Daily ₹550</div>
+  </div>
+  <div class="plan">
+    <div class="plan-title">PLAN 5</div>
+    <div class="plan-details">₹2299 • 10 Days • Daily ₹1199</div>
+  </div>
+</div>
+
 </body>
 </html>
