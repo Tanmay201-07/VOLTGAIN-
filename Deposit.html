@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Deposit - Voltgain</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f4f8;
+      padding: 20px;
+      text-align: center;
+    }
+    .container {
+      max-width: 400px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #222;
+    }
+    .upi {
+      font-size: 18px;
+      margin: 10px 0;
+      color: #444;
+    }
+    .qr-code {
+      width: 200px;
+      height: 200px;
+      margin: 15px 0;
+    }
+    .copy-btn {
+      padding: 10px 20px;
+      border: none;
+      background: #22c55e;
+      color: white;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .copy-btn:hover {
+      background: #16a34a;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Deposit Funds</h1>
+    <p class="upi">Scan QR or use UPI ID</p>
+    <img src="qr.png" alt="UPI QR Code" class="qr-code" />
+    <p class="upi"><strong>UPI ID:</strong> 7893607189@ybl</p>
+    <button class="copy-btn" onclick="copyUPI()">Copy UPI ID</button>
+  </div>
+
+  <script>
+    function copyUPI() {
+      navigator.clipboard.writeText("7893607189@ybl").then(() => {
+        alert("UPI ID copied to clipboard!");
+      });
+    }
+  </script>
+</body>
+</html>
